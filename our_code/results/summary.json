@@ -1,0 +1,37 @@
+{
+  "n_wallets": 100000,
+  "n_features_cluster": 12,
+  "n_features_classify": 6,
+  "best_k_kmeans": 2,
+  "best_silhouette_kmeans": 0.17096932171800433,
+  "best_silhouette_hierarchical": 0.1871278869723849,
+  "stability_silhouette_mean": 0.170970338201036,
+  "stability_silhouette_std": 4.484410929197765e-07,
+  "knn": {
+    "best_k": 7,
+    "test_accuracy": 0.8904444444444445,
+    "test_macro_f1": 0.8901890920570803,
+    "n_train": 21000,
+    "n_val": 4500,
+    "n_test": 4500,
+    "confusion_matrix": [
+      [
+        2112,
+        278
+      ],
+      [
+        215,
+        1895
+      ]
+    ]
+  },
+  "personas_kmeans": {
+    "0": "Cluster 0 (n=52729): high longshot_ratio (z=+0.24), high avg_trade_size (z=+0.00), low hour_entropy (z=-0.60).",
+    "1": "Cluster 1 (n=47271): high hour_entropy (z=+0.67), high active_days (z=+0.46), low longshot_ratio (z=-0.26)."
+  },
+  "pca_explained_variance_ratio_2d": [
+    0.2943756265548976,
+    0.22726712724312378
+  ],
+  "elapsed_sec": 84.38881516456604
+}

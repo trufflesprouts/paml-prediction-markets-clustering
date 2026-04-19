@@ -1,0 +1,65 @@
+{
+  "v1": {
+    "best_k": 2,
+    "best_silhouette_subsample": 0.17096932171800433,
+    "k5_silhouette_subsample": 0.1596055198676325,
+    "n_features": 12
+  },
+  "v2": {
+    "best_k": 5,
+    "best_silhouette_subsample": 0.19034522663332026,
+    "best_silhouette_fullfit": 0.19201017475687085,
+    "k5_silhouette_fullfit": 0.19201017475687085,
+    "n_features": 11,
+    "features": [
+      "trade_count",
+      "total_volume_usd",
+      "distinct_tokens",
+      "avg_trade_size",
+      "std_trade_size",
+      "trades_per_day",
+      "buy_fraction",
+      "avg_price",
+      "longshot_ratio",
+      "directional_conviction",
+      "size_variability"
+    ],
+    "cluster_sizes_best": [
+      31968,
+      8595,
+      37314,
+      14878,
+      7245
+    ],
+    "cluster_sizes_k5": [
+      31968,
+      8595,
+      37314,
+      14878,
+      7245
+    ],
+    "pca_evr_best": [
+      0.3076786252298901,
+      0.1826190316244331
+    ],
+    "pca_evr_k5": [
+      0.3076786252298901,
+      0.1826190316244331
+    ]
+  },
+  "personas_best": {
+    "0": "Cluster 0 (n=31968): high size_variability (z=+0.31), high avg_price (z=+0.24), low buy_fraction (z=-0.20).",
+    "1": "Cluster 1 (n=8595): high directional_conviction (z=+2.14), high buy_fraction (z=+2.03), low longshot_ratio (z=-0.11).",
+    "2": "Cluster 2 (n=37314): high avg_price (z=+0.22), high trade_count (z=-0.04), low size_variability (z=-0.44).",
+    "3": "Cluster 3 (n=14878): high size_variability (z=+0.55), high distinct_tokens (z=+0.48), low longshot_ratio (z=-0.19).",
+    "4": "Cluster 4 (n=7245): high longshot_ratio (z=+2.21), high trade_count (z=-0.04), low avg_price (z=-2.44)."
+  },
+  "personas_k5": {
+    "0": "Cluster 0 (n=31968): high size_variability (z=+0.31), high avg_price (z=+0.24), low buy_fraction (z=-0.20).",
+    "1": "Cluster 1 (n=8595): high directional_conviction (z=+2.14), high buy_fraction (z=+2.03), low longshot_ratio (z=-0.11).",
+    "2": "Cluster 2 (n=37314): high avg_price (z=+0.22), high trade_count (z=-0.04), low size_variability (z=-0.44).",
+    "3": "Cluster 3 (n=14878): high size_variability (z=+0.55), high distinct_tokens (z=+0.48), low longshot_ratio (z=-0.19).",
+    "4": "Cluster 4 (n=7245): high longshot_ratio (z=+2.21), high trade_count (z=-0.04), low avg_price (z=-2.44)."
+  },
+  "elapsed_sec": 63.74020028114319
+}

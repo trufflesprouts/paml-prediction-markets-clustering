@@ -9,7 +9,7 @@ import pandas as pd
 import seaborn as sns
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = ROOT / "our_code" / "data"
 OUR = ROOT / "our_code"
 SS = OUR / "screenshots"
 SS.mkdir(exist_ok=True)

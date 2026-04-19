@@ -1,0 +1,65 @@
+{
+  "best_k": 5,
+  "test_accuracy": 0.838,
+  "test_macro_f1": 0.7738117716978243,
+  "baseline_majority_accuracy": 0.37333333333333335,
+  "baseline_majority_macro_f1": 0.10873786407766992,
+  "n_train": 21000,
+  "n_val": 4500,
+  "n_test": 4500,
+  "n_classes": 5,
+  "features": [
+    "max_trade_size",
+    "trade_size_cv",
+    "win_rate",
+    "excess_return",
+    "total_pnl",
+    "resolved_trade_count",
+    "maker_fraction"
+  ],
+  "target_labels_source": "kmeans_v2_labels.npy",
+  "confusion_matrix": [
+    [
+      1278,
+      36,
+      37,
+      48,
+      4
+    ],
+    [
+      112,
+      146,
+      130,
+      13,
+      21
+    ],
+    [
+      55,
+      56,
+      1537,
+      19,
+      13
+    ],
+    [
+      74,
+      4,
+      40,
+      536,
+      3
+    ],
+    [
+      15,
+      18,
+      30,
+      1,
+      274
+    ]
+  ],
+  "class_sizes": [
+    31968,
+    8595,
+    37314,
+    14878,
+    7245
+  ]
+}

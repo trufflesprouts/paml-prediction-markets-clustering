@@ -37,7 +37,7 @@ from models import (  # noqa: E402
 )
 
 ROOT = _HERE.parent
-DATA_DIR = ROOT / "data"
+DATA_DIR = ROOT / "our_code" / "data"
 RESULTS = _HERE / "results"
 
 

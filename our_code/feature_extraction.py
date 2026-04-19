@@ -10,8 +10,8 @@ Two-pass strategy (disk-friendly):
     Pass 3: hour_entropy aggregation on the same sampled wallets.
 
 Output:
-    data/wallet_features_raw.csv
-    data/wallet_features_normalized.csv
+    our_code/data/wallet_features_raw.csv
+    our_code/data/wallet_features_normalized.csv
 """
 
 from __future__ import annotations
@@ -24,11 +24,14 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
+# `data/` holds the 33 GB raw parquet (gitignored); precomputed wallet features
+# are written into `our_code/data/` so they can be committed.
 DATA_DIR = ROOT / "data"
 POLY = DATA_DIR / "polymarket"
 
-RAW_OUT = DATA_DIR / "wallet_features_raw.csv"
-NORM_OUT = DATA_DIR / "wallet_features_normalized.csv"
+OUT_DIR = ROOT / "our_code" / "data"
+RAW_OUT = OUT_DIR / "wallet_features_raw.csv"
+NORM_OUT = OUT_DIR / "wallet_features_normalized.csv"
 
 MIN_TRADES = 10
 SAMPLE_N = 100_000
@@ -382,7 +385,7 @@ def main() -> None:
     ]
     df = df[keep]
 
-    DATA_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     df.to_csv(RAW_OUT, index=False)
     print(f"[feature_extraction] wrote raw -> {RAW_OUT}  ({len(df):,} wallets)", flush=True)
 

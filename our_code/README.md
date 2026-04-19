@@ -38,8 +38,8 @@ compressed, ~50 GB extracted).
    uv run python our_code/feature_extraction.py
    ```
 
-   Output: `data/wallet_features_raw.csv` and
-   `data/wallet_features_normalized.csv`. Wallets with < 10 trades are dropped.
+   Output: `our_code/data/wallet_features_raw.csv` and
+   `our_code/data/wallet_features_normalized.csv`. Wallets with < 10 trades are dropped.
 
 2. Run the full experiment pipeline (K-Means sweep, Hierarchical, stability,
    KNN tuning, PCA):

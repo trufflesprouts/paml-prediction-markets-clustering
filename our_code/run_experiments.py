@@ -36,7 +36,7 @@ from models import (
 )
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
+DATA_DIR = ROOT / "our_code" / "data"
 OUR_CODE = ROOT / "our_code"
 RESULTS = OUR_CODE / "results"
 

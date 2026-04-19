@@ -12,7 +12,9 @@ wheels/
 # Virtual environments
 .venv
 .backfill_cursor
-data
+# Raw polymarket/kalshi parquet dataset (~50 GB after extraction).
+# Anchored with leading `/` so `our_code/data/` (committed wallet CSVs) is NOT ignored.
+/data/
 data.zip
 
 research/*
@@ -29,11 +31,13 @@ fig
 output
 .tmp
 
-# Team code artifacts (produced by our_code/ scripts; re-generate with the scripts)
-results/
-our_code/data/
-our_code/results/
+# Anchored at repo root; our_code/results/ is intentionally committed.
+/results/
 .ipynb_checkpoints/
+
+# `our_code/data/` and `our_code/results/` are intentionally committed so the
+# Streamlit app + notebook run standalone from a fresh clone.  Raw parquet data
+# lives in `data/` (above) which stays ignored.
 
 # Claude Code session state
 .claude/

@@ -41,7 +41,7 @@ def build() -> dict:
 
 This notebook runs end-to-end EDA and model evaluation for the Polymarket
 trader-archetype clustering project. It assumes:
-- `data/wallet_features_raw.csv` and `data/wallet_features_normalized.csv` exist
+- `our_code/data/wallet_features_raw.csv` and `our_code/data/wallet_features_normalized.csv` exist
   (run `our_code/feature_extraction.py` first).
 - `our_code/results/` has been populated by `our_code/run_experiments.py`.
 """))
@@ -67,7 +67,7 @@ from models import (
     profile_clusters, pca_2d, train_val_test_split,
 )
 
-DATA = ROOT / "data"
+DATA = ROOT / "our_code" / "data"
 RESULTS = ROOT / "our_code" / "results"
 sns.set_theme(style="whitegrid", context="notebook")
 """))

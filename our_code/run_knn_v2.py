@@ -33,7 +33,7 @@ from models import (  # noqa: E402
 )
 
 ROOT = HERE.parent
-DATA = ROOT / "data"
+DATA = ROOT / "our_code" / "data"
 RESULTS = HERE / "results"
 
 CLASSIFY_FEATURES_V2 = [
