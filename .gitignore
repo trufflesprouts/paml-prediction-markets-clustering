@@ -28,3 +28,12 @@ fig
 *.tar.zst
 output
 .tmp
+
+# Team code artifacts (produced by our_code/ scripts; re-generate with the scripts)
+results/
+our_code/data/
+our_code/results/
+.ipynb_checkpoints/
+
+# Claude Code session state
+.claude/

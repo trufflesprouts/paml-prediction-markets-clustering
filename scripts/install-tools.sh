@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-TOOLS=("zstd" "aria2c")
+TOOLS=("zstd")
 
 # Check if a tool is installed
 check_tool() {
