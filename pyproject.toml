@@ -22,6 +22,9 @@ dependencies = [
     "web3>=6.0.0",
     "simple-term-menu>=1.6.0",
     "python-dotenv>=1.2.1",
+    "streamlit>=1.50.0",
+    "seaborn>=0.13.2",
+    "numpy>=2.0.2",
 ]
 
 [dependency-groups]
