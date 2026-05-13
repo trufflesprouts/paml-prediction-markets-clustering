@@ -254,7 +254,7 @@ def page_cluster(raw: pd.DataFrame, norm_v2: np.ndarray) -> None:
     )
     st.metric("Silhouette (sample)", f"{sil:.4f}")
 
-    # PCA scatter colored by cluster
+    # PCA on all points (100K × 11 is small)
     proj, evr = pca_2d(X_display)
     K = int(labels_display.max()) + 1
     fig, ax = plt.subplots(figsize=(6, 5))

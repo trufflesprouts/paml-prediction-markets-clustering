@@ -352,19 +352,20 @@ def silhouette_score(
     else:
         sample = np.arange(n)
 
+    # Compute distances only within the sample to keep memory bounded
+    # at O(sample_size^2) instead of O(sample_size * N).
     Xs = X[sample]
     ys = labels[sample]
-    # distances from each sampled point to ALL points in X (for robust cluster stats)
     xs_norm = np.sum(Xs * Xs, axis=1)[:, None]
-    all_norm = np.sum(X * X, axis=1)[None, :]
-    d = xs_norm - 2.0 * Xs @ X.T + all_norm
+    xs_norm_t = xs_norm.T
+    d = xs_norm - 2.0 * Xs @ Xs.T + xs_norm_t
     d = np.sqrt(np.maximum(d, 0))
 
     s = np.zeros(len(sample), dtype=np.float64)
-    for i, point_idx in enumerate(sample):
+    for i in range(len(sample)):
         my_label = ys[i]
-        a_mask = labels == my_label
-        a_mask[point_idx] = False  # exclude self
+        a_mask = ys == my_label
+        a_mask[i] = False  # exclude self
         if a_mask.any():
             a = d[i, a_mask].mean()
         else:
@@ -373,7 +374,7 @@ def silhouette_score(
         for other in unique:
             if other == my_label:
                 continue
-            other_mask = labels == other
+            other_mask = ys == other
             if other_mask.any():
                 b_candidate = d[i, other_mask].mean()
                 if b_candidate < b:
